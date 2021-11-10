@@ -1,10 +1,12 @@
 export default class UserService{
-    constructor(){
-        this.user = []
-    }   
-
+    constructor(loggerService){
+        this.users = []
+        this.loggerService =loggerService
+    }
+    
     add(user){
-       this.user.push(user)
+       this.users.push(user)
+       this.loggerService.log(user)
     }
 
     list(){
@@ -12,7 +14,7 @@ export default class UserService{
     }
 
     getById(id){
-        return this.user.find(u=>u.id ===id)
+        return this.users.find(u=>u.id ===id)
     }
-    
+  
 }

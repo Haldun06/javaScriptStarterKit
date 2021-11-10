@@ -1,9 +1,8 @@
-expor default class User {
-    constructor(id, firstNamelastName, city) {
+export default class User {
+    constructor(id, firsName, lastName, city) {
         this.id = id
-        this.firstName = this.firstName
-        this.last
-
-
+        this.firsName = firsName
+        this.lastName = lastName
+        this.city = city
     }
 }
